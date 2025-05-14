@@ -172,7 +172,7 @@ h6 {
   left: 0;
   bottom: 0;
   padding: 0 15px;
-  width: 300px;
+  width: 17rem;
   transition: all ease-in-out 0.3s;
   overflow-y: auto;
   z-index: 997;
@@ -525,7 +525,6 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 60px 0;
   overflow: clip;
 }
@@ -552,7 +551,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: linear-gradient(to bottom, #d9b105, #b8860b);
   left: 0;
   bottom: 0;
 }
@@ -672,7 +671,7 @@ section,
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: var(--accent-color);
+  color: #b8860b;
   line-height: 0;
 }
 
@@ -743,7 +742,7 @@ section,
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: var(--accent-color);
+  background: linear-gradient(to bottom, #d9b105, #b8860b);
 }
 
 /*--------------------------------------------------------------
@@ -760,7 +759,7 @@ section,
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
+  border-left: 2px solid #b8860b;
   position: relative;
 }
 
@@ -802,7 +801,7 @@ section,
   left: -9px;
   top: 0;
   background: var(--background-color);
-  border: 2px solid var(--accent-color);
+  border: 2px solid #b8860b;
 }
 
 /*--------------------------------------------------------------
@@ -852,7 +851,15 @@ section,
   position: relative;
   overflow: hidden;
 }
-
+@media (max-width: 768px) {
+  .portfolio-info {
+    opacity: 1 !important;
+    position: static;
+  }
+  .img-fluid-portfolio{
+    opacity: 0.5;
+  }
+}
 .portfolio .portfolio-content img {
   transition: 0.3s;
 }
@@ -902,13 +909,21 @@ section,
 
 .portfolio .portfolio-content .portfolio-info .preview-link:hover,
 .portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
+  color: #b8860b;
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
+  left: 45%;
   font-size: 34px;
   line-height: 0;
+}
+
+.isotope-layout {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 
+    -20px 0px 40px -10px rgba(0, 0, 0, 0.6), /* izquierda */
+     20px 0px 40px -10px rgba(0, 0, 0, 0.6); /* derecha */
 }
 
 .portfolio .portfolio-content:hover .portfolio-info {
